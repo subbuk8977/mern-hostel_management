@@ -15,7 +15,7 @@ port=8000
 app.use(express.json({ limit: '10mb' }));
 app.use(cors(
     {
-        origin:["https://mern-hostel-management-api.vercel.app/"],
+        origin:["https://mern-hostel-management-frontend.vercel.app/"],
         methods:["POST","GET"],
         credentials:true
     }
