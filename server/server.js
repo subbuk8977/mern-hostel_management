@@ -13,7 +13,13 @@ const ReviewsRoute=require("./routes/ReviewRoute")
 port=8000
 
 app.use(express.json({ limit: '10mb' }));
-app.use(cors())
+app.use(cors(
+    {
+        origin:["https://deploy-mern-lwhq.vercel.app"],
+        methods:["POST","GET"],
+        credentials:true
+    }
+))
 app.use("/",Hosteldataroute)
 app.use("/",Authroute)
 app.use("/",Fetchroute)
