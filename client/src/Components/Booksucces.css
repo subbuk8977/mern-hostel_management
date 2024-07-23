@@ -1,0 +1,49 @@
+.booksuccessdiv{
+    width: 600px;
+    height: 400px;
+    background: rgb(251,247,255);
+background: linear-gradient(90deg, rgba(251,247,255,1) 0%, rgba(215,247,249,1) 100%);
+    border-radius: 5px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    -webkit-box-shadow: 10px 10px 20px -12px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 20px -12px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 20px -12px rgba(0,0,0,0.75)
+}
+.booksuccessdiv img{
+    width: 100px;
+    height: 100px;
+    margin-left: 250px;
+    margin-top: 30px;
+}
+.booksuccessdiv h2{
+    text-align: center;
+    font-family: arapey;
+    margin-bottom: 10px;
+}
+.booksuccessdiv h3{
+    text-align: center;
+    font-family:arapey;
+    margin-bottom: 50px;
+}
+.pofbook{
+    text-align: start;
+    font-family: arapey;
+}
+.tahnkyoup{
+    font-family: "Lobster";
+    text-align: center;
+    font-size: 50px;
+}
+.booksuccessdiv button{
+    margin-left: 250px;
+    padding: 10px;
+    border:none;
+    font-family: "Lobster";
+    background: rgb(173, 217, 246);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+

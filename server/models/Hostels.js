@@ -1,0 +1,30 @@
+const mongoose=require("mongoose")
+const Hostelschema=new mongoose.Schema({
+    hostelname:{type:String,required:true},
+    hostelimage:{type:String,required:true},
+    hostelmoreimage:{type:String},
+    location:{type:String},
+    mainlocation:{type:String},
+    distancefrommailocation:{type:Number},
+    price:{type:Number},
+    hosteltype:{type:String},
+    noofmembersinroom:{type:String},
+    tenure:{type:Number},
+    description:{type:String},
+    ownername:{type:String},
+    contactno:{type:Number},
+    amenities:{type:String},
+    service:{type:String},
+    nearbyplace:{type:String},
+    category:{type:String},
+    Availableroom:{type:Number},
+    Ac:{type:String},
+    Wifi:{type:String},
+    lat:{type:Number},
+    lng:{type:Number},
+    customiseservice:{type:Boolean,default:false},
+    nofood:{type:Number},
+    noironing:{type:Number},
+    nowash:{type:Number}
+})
+module.exports=mongoose.model("Hostel",Hostelschema)

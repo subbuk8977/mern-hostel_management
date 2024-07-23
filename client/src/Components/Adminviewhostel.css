@@ -1,0 +1,60 @@
+.mainwrapofbooking{
+    width:100%;
+    height: 100vh;
+    background: white;
+}
+.viewmainwrap{
+    position:absolute;
+    top:50%;
+    left:50%;
+    overflow: auto;
+    transform: translate(-50%,-50%);
+    width:400px;
+    height: 450px;
+    background: linear-gradient(90deg, rgba(192,239,250,1) 0%, rgba(207,232,231,1) 50%, rgba(211,221,234,1) 100%);
+border-radius: 20px;
+-webkit-box-shadow: 10px 10px 13px -13px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 13px -13px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 13px -13px rgba(0,0,0,0.75);
+padding-bottom: 10px;
+gap:10px;
+}
+.h3ofviewbok{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: arapey;
+}
+.divofeachmainbook{
+    width:350px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 13px -13px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 13px -13px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 13px -13px rgba(0,0,0,0.75);
+background: rgb(209,218,246);
+background: linear-gradient(90deg, rgba(209,218,246,1) 0%, rgba(140,190,249,1) 100%);
+display:flex;
+justify-self: center;
+flex-direction: column;
+align-items: center;
+margin-bottom: 10px;
+margin-left: 20px;
+}
+.booksof p{
+    text-align:start;
+    font-family:NATS;
+    margin-left: 10px;
+}
+.booksofof{
+    border: 2px solid black;
+    padding: 10px;
+    width:300px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.booksofof p{
+    text-align: start;
+    font-family: arapey;
+}

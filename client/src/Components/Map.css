@@ -1,0 +1,54 @@
+.leaflet-container{
+    width:300px;
+    height:250px;
+    position: absolute;
+    bottom: 40px;
+    left:10px;
+    border-radius: 10px;
+}
+.mappopupcontent{
+    color:rgb(2, 2, 33);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+.hotelimagesinmap{
+    width:150px;
+    height:100px;
+    border-radius:10px;
+    margin-bottom: -20px;
+}
+p{
+    text-align: center;
+}
+.currentlocationbutton{
+position: absolute;
+bottom:5px;
+width:150px;
+left:75px;
+height: 30px;
+border-radius:20px;
+border:none;
+background: rgb(53,155,235);
+background: linear-gradient(90deg, rgb(180, 215, 241) 0%, rgba(136,192,236,1) 50%, rgb(190, 226, 251) 100%);
+font-family: 'Lobster', cursive;
+color:rgb(2, 14, 43);
+-webkit-box-shadow: 10px 10px 14px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 14px -10px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 14px -10px rgba(0,0,0,0.75);
+}
+.currentlocationbutton:hover{
+    scale:calc(1.02)
+}
+.mapwrapdiv{
+    width:150px;
+    height: 160px;
+    font-family: 'Lobster Two', cursive;
+    padding:10px;
+    background: rgba(217, 223, 235, 0.25);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}

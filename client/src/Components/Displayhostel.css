@@ -1,0 +1,288 @@
+
+.hostelwrap{
+    width:800px;
+    height: 200px;
+    display:flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    background: rgb(222,254,253);
+    background: linear-gradient(90deg, rgba(222,254,253,1) 0%, rgb(129, 177, 248) 100%);
+    padding: 10px;
+    position: relative;
+}
+.hostelwrap img{
+    width:300px;
+    height: 200px;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 14px -9px rgba(3,3,3,1);
+     -moz-box-shadow: 10px 10px 14px -9px rgba(3,3,3,1);
+     box-shadow: 10px 10px 14px -9px rgba(3,3,3,1);
+     margin-right: 10px;
+     display:flex;
+     align-items: center;
+     justify-content: center;
+}
+.hostelwrap img:hover{
+    scale:calc(1.03)
+}
+.hostelcontent{
+    padding-left: 10px;
+    margin-top:-20px;
+    font-family: 'Inter Tight', sans-serif;
+    width:450px;
+}
+.ratewithfavdiv{
+    display:flex;
+    gap:150px;
+}
+.ratewithfavdiv div{
+ margin-top: 80px; 
+ font-family: 'Gentium Plus', serif;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+}
+.ratewithfavdiv p{
+    margin-right: 20px;
+}
+.unvalibleh4content{
+    position:absolute;
+    left:80px;
+    color:rgb(195, 222, 245);
+}
+.unavilablewrap{
+    position: absolute;
+    width:820px;
+    height: 220px;
+    background: rgba(255, 0, 0, 0.25);
+    top:0px;
+    left:0px;
+    border-radius: 10px;
+}
+.hostelcontent h3{
+    font-family: 'Gentium Plus', serif;
+    font-size:25px;
+}
+.hostelcontent h4{
+    margin-top: 80px;
+    font-family: 'Gentium Plus', serif;
+}
+.hostelcontent p{
+    text-align: left;
+}
+.locationcontentdiv div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.ptagfordistancefrommainloaction{
+    font-size: 12px;
+    margin-left:200px;
+    color:rgb(140, 4, 8);
+}
+
+.locationcontent{
+font-family: 'Gentium plus';
+}
+.locationcontentdiv{
+    display:flex;
+    gap:5px;
+    align-items: center;
+    margin-top: 10px;
+    width:750px;
+}
+.hostelrow{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.resulttext{
+    font-family: 'Gentium plus';
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bolder;
+    color:rgb(243, 241, 251);
+    width:300px;
+}
+.displayoptions{
+    display: flex;
+    gap:400px;
+    justify-content: center;
+    align-items: center;
+}
+.displaybuttondiv{
+    display:flex;
+    gap:30px;
+    justify-content: center;
+    align-items: center;
+}
+.displaybuttondiv button{
+    width:80px;
+    height: 30px;
+    background:black;
+    border:2px white solid;
+    color:white;
+    margin-top: 20px;
+}
+.displaymain{
+    position:relative;
+    margin-top:100px;;
+}
+.filterdiv{
+    opacity: 1;
+    width:200px;
+    height:100px;
+    border-radius: 10px;
+    background: rgb(172,182,255);
+    background: linear-gradient(90deg, rgba(172,182,255,1) 0%, rgba(203,202,255,1) 49%, rgba(178,154,246,1) 100%);
+    position: absolute;
+    right:2%;
+    top:100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight:300;
+    gap:10px;
+    font-family: 'Satisfy', cursive;
+    transition: all 1s;
+}
+.filterdivoff{
+    opacity: 0;
+    transition: all 1s;
+    transform-origin: 10px;
+    width:200px;
+    height: 0px;
+    border-radius: 10px;
+    background: rgb(172,182,255);
+    background: linear-gradient(90deg, rgba(172,182,255,1) 0%, rgba(203,202,255,1) 49%, rgba(178,154,246,1) 100%);
+    position: absolute;
+    right:2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top:10px;
+    gap:10px;
+    font-family: 'Satisfy', cursive;
+
+
+}
+.sorttoinnerdiv{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sorttoinnerdiv div{
+    margin-bottom: 10px;
+}
+.sorttoinnerdiv p{
+    color:rgb(184, 12, 12)
+}
+.sorttoinnerdiv input{
+    margin-left: 15px;
+}
+.sorttoinnerdiv button{
+    width: 80px;
+    height: 30px;
+    background: rgb(202, 202, 255);
+    border:2px white solid;
+}
+.sortdiv{
+    opacity: 1;
+    width:200px;
+    height:250px;
+    border-radius: 10px;
+    background: rgb(172,182,255);
+    background: linear-gradient(90deg, rgba(172,182,255,1) 0%, rgba(203,202,255,1) 49%, rgba(178,154,246,1) 100%);
+    position:absolute;
+    right:2%;
+    top:220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight:300;
+    gap:10px;
+    font-family: 'Satisfy', cursive;
+    transition: all 1s; 
+}
+.heartcolor{
+    background: white;
+}
+.favdivwrap{
+    width:500px;
+   background: rgba(118, 246, 253, 0.25);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position: absolute;
+    top:180px;
+    left:50%;
+    transform: translate(-50%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.divofmappedfavdata{
+    width:400px;
+    height:100px;
+    display:flex;
+    background: rgba(239, 233, 245, 0.685);
+    background: radial-gradient(circle, rgba(239,233,245,1) 0%, rgba(205,231,233,1) 80%); 
+    border-radius: 10px;
+    align-items: center;
+}
+.divofmappedfavdataimg{
+    width:150px;
+    height: 90px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.divofmappedfavdata div{
+    margin-left: 10px;
+    font-family: 'Satisfy', cursive;
+}
+.closeoffavimage{
+    width:35px;
+    height: 35px;
+    position: absolute;
+    top:2%;
+    right:2%;
+}
+.deafultfavtext{
+font-family: 'Gentium Plus', cursive;
+}
+.deletefabutton{
+    position: absolute;
+    right: 20px;
+    width:20px;
+    height: 20px;
+}
+.customisep{
+    position: absolute;
+    font-family:NATS;
+    color:rgb(4, 124, 4);
+    font-size: 12px;
+    top:60%;
+    left:40%;
+}
+.customisepp{
+    position: absolute;
+    font-family:NATS;
+    color:rgb(113, 4, 4);
+    font-size: 12px;
+    top:60%;
+    left:40%;
+}

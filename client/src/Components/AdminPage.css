@@ -1,0 +1,62 @@
+.adminpagemaindiv{
+    width:100%;
+    min-height: 100vh;
+    background: white;
+}
+.adminh1{
+    text-align: center;
+    font-family: arapey;
+    margin-top:20px;
+}
+.wrapadmin{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width:600px;
+    height: 350px;
+    transform: translate(-50%,-50%);
+    background: rgb(192,239,250);
+background: linear-gradient(90deg, rgba(192,239,250,1) 0%, rgba(207,232,231,1) 50%, rgba(211,221,234,1) 100%);
+border-radius: 20px;
+-webkit-box-shadow: 10px 10px 13px -13px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 13px -13px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 13px -13px rgba(0,0,0,0.75);
+display:flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding-bottom: 10px;;
+}
+.adminbutton{
+    width:250px;
+    height: 100px;
+    border-radius: 10px;
+    background: rgb(98,118,185);
+background: linear-gradient(90deg, rgba(98,118,185,1) 0%, rgba(7,66,136,1) 100%);
+color:white;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: arapey;
+}
+.flexofadmin{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width:550px;
+    height: 250px;
+    margin-top: 20px;
+    gap:10px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.backbuttoninadminpage{
+    margin-left: 90%;
+    width:100px;
+    height: 40px;
+    border-radius: 10px;
+    border:none;
+    background: rgb(184, 238, 252);
+    margin-top: 10px;
+}

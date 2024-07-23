@@ -1,0 +1,161 @@
+.profiledetaildiv{
+    display:flex;
+    position: absolute;
+    width:600px;
+    height: 500px;
+    background: rgb(252, 250, 248,.8);
+    top:50%;
+    left:50%;
+    border-radius: 20px;
+    -webkit-box-shadow: 15px 15px 20px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 15px 15px 20px -12px rgba(0,0,0,0.75);
+    box-shadow: 15px 15px 20px -12px rgba(0,0,0,0.75);
+    transform: translate(-50%,-50%);
+}
+.profilebackimg{
+    width:700px;
+    min-height: 600px;
+    border-radius: 20px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    filter:brightness(50%) ;
+    -webkit-box-shadow: 15px 15px 20px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 15px 15px 20px -12px rgba(0,0,0,0.75);
+    box-shadow: 15px 15px 20px -12px rgba(0,0,0,0.75);
+}
+.profileimagediv{
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.profileimagediv img{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top:20px;
+    border:4px solid rgb(19, 19, 20);
+}
+.profileimagediv h3{
+    font-family: 'Gentium Plus';
+    font-size: 25px;
+    margin-top: 50px;
+    text-align: center;
+}
+.profilecontent{
+    margin-top:30px;
+}
+.profilecontent h3{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom:30px;
+}
+.profileselectiondiv{
+    display:flex;
+    gap:10px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+.notselection{
+    width:120px;
+    text-align: center;
+    border-bottom:solid black 1px;
+    padding-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.selection{
+    width:120px;
+    text-align: center;
+    border-bottom:solid rgb(39, 117, 194) 3px;
+    padding-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    scale: calc(1.1);
+    
+}
+.profiledatadiv{
+    display:flex;
+    gap:10px;
+    color:rgb(4, 6, 102);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.profiledatadivdata{
+    color:rgb(54, 53, 53);
+    font-size: 15px;
+}
+.profiledatawrapdiv button{
+ width:100px;
+ height:30px;
+ background: none;
+ font-family: 'Times New Roman', Times, serif;
+ margin-left: 20px;
+ border:solid rgb(2, 18, 45) 2px; 
+ color:rgb(2, 23, 57);
+ margin-top: 80px;
+}
+.profiledatawrapdiv button:hover{
+    background: rgb(2, 21, 53);
+    color:white;
+    border:2px solid rgb(133, 192, 252);
+    transition:.5s;
+}
+.profiledatawrapdiv{
+    margin-left:20px;
+}
+.profileselectiondiv{
+    margin-left: 40px;
+}
+.detailbutton{
+ width:100px;
+ height:30px;
+ background: none;
+ font-family: 'Times New Roman', Times, serif;
+ border:solid rgb(2, 18, 45) 2px; 
+ color:rgb(2, 23, 57);
+ margin-top: 20px;
+}
+.profileupdatediv{
+    width:300px;
+    height: 180px;
+    background: white;
+    border-radius: 10px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+.profileupdatediv input {
+    margin-top: 20px;
+}
+.detailsbutton{
+    background: none;
+    border:2px solid black;
+    width:80px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.detailsbutton:hover{
+    background: rgb(2, 21, 53);
+    color:white;
+    border:2px solid rgb(133, 192, 252);
+    transition:.5s;
+}
+.addimagebutton{
+    position: absolute;
+    left:14%;
+    top:50%;
+    height: 30px;
+}
+.addimagebutton:hover{
+    background: rgb(2, 21, 53);
+    color:white;
+    border:2px solid rgb(133, 192, 252);
+    transition:1s;
+}
