@@ -9,7 +9,7 @@ function Admin() {
     setdata({...data,[event.target.name]:event.target.value})
   }
   const submit=()=>{
-    axios.post("http://localhost:8000/addhostel",{data}).then((responce)=>{
+    axios.post("https://mern-hostel-management-api.vercel.app/addhostel",{data}).then((responce)=>{
         alert("Hostel Data Submited")
         history("/adminpage")
     })

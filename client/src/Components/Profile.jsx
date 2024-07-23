@@ -33,7 +33,7 @@ function Profile() {
   }
   const upload=()=>{
     setLoaging(true)
-    axios.post(`http://localhost:8000/uploadimage/${profile.state.profile._id}`,{data}).then((responce)=>{
+    axios.post(`https://mern-hostel-management-api.vercel.app/uploadimage/${profile.state.profile._id}`,{data}).then((responce)=>{
       imagepopup(false)
       setLoaging(false)
       alert("Image Updated Succesfully")

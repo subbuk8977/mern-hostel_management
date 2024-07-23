@@ -11,7 +11,7 @@ function Login() {
     setData({...data,[event.target.name]:event.target.value})
     }
     const passdata=async()=>{
-            axios.post("http://localhost:8000/login",{data}).then((responce)=>{
+            axios.post("https://mern-hostel-management-api.vercel.app/login",{data}).then((responce)=>{
             if(responce.data==="IP"||responce.data==="IU")
             alert("Inavlid Username or Password")
             else

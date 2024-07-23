@@ -21,11 +21,11 @@ const [fetchedfavdata,setFecthedfavdata]=useState()
 const id=props.userid.data._id
 let sorteddata;
 useEffect(()=>{
-axios.get("http://localhost:8000/fetchhotel").then((responce)=>{
+axios.get("https://mern-hostel-management-api.vercel.app/fetchhotel").then((responce)=>{
   console.log(responce.data)
   setDatas(responce.data)
 })
-axios.get(`http://localhost:8000/initialfav/${id}`).then((responce)=>{
+axios.get(`https://mern-hostel-management-api.vercel.app/initialfav/${id}`).then((responce)=>{
     console.log("new promise",responce.data)
     if(responce.data.favhotelidarray)
     setFavdataarray(responce.data.favhotelidarray)
@@ -38,13 +38,13 @@ const handle=(e)=>{
 }
 const favdivfunction=()=>{
   setFavdiv(true)
-  axios.get(`http://localhost:8000/fetchfavhotel/${props.userid.data._id}`).then((responce)=>{
+  axios.get(`https://mern-hostel-management-api.vercel.app/fetchfavhotel/${props.userid.data._id}`).then((responce)=>{
     console.log("favdata",responce)
     setFecthedfavdata(responce.data)
   })
 }
 const deletefavfunc=(id)=>{
-  axios.post(`http://localhost:8000/deletefav/${props.userid.data._id}`,{data:id}).then((responce)=>{
+  axios.post(`https://mern-hostel-management-api.vercel.app/${props.userid.data._id}`,{data:id}).then((responce)=>{
     if(responce)
     favdivfunction()
   })
@@ -52,12 +52,12 @@ const deletefavfunc=(id)=>{
 const addfavid=(item)=>{
 console.log("correct favdiv",favdatarray,favdatarray.includes(item._id))
 favdatarray.includes(item._id) ? setFavdataarray(favdatarray.filter((value)=>value!==item._id)):setFavdataarray([...favdatarray,item._id])
-axios.post(`http://localhost:8000/favhotel/${props.userid.data._id}`,{data:[item._id]}).then((responce)=>console.log("backs",responce))
+axios.post(`https://mern-hostel-management-api.vercel.app/${props.userid.data._id}`,{data:[item._id]}).then((responce)=>console.log("backs",responce))
 }
 const addfavidsort=(item)=>{
   console.log("fav clicked",favdatarraysort.includes(item._id),favdatarraysort,item._id)
   favdatarraysort.includes(item._id) ? setFavdataarraysort(favdatarraysort.filter((value)=>value!==item._id)):favdatarraysort.push(item._id)
-  axios.post(`http://localhost:8000/favhotel/${props.userid.data._id}`,{data:[item._id]}).then((responce)=>console.log("backs",responce))
+  axios.post(`https://mern-hostel-management-api.vercel.app/${props.userid.data._id}`,{data:[item._id]}).then((responce)=>console.log("backs",responce))
   }
 let hostelarray
 hostelarray= !displaysort ? datas.filter((data)=>{

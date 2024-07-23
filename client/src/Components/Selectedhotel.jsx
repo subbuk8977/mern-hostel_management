@@ -77,7 +77,7 @@ function Selectedhotel() {
     console.log("bookdata",bookingdata)
     if(data.state.user.contactno)
     {
-    axios.post("http://localhost:8000/addbooking",{data:bookingdata}).then((responce)=>{
+    axios.post("https://mern-hostel-management-api.vercel.app/addbooking",{data:bookingdata}).then((responce)=>{
       console.log(responce.data)
       if(responce.data===2)
       alert("You cannot Book More than 2 hostels from a Account")

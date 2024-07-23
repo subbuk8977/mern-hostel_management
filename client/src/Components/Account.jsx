@@ -27,7 +27,7 @@ function Account() {
   }
   const enablefuction=()=>{
     setEnableviewbook(true)
-    axios.get(`http://localhost:8000/getbooking/${userdata.state.data._id}`).then((responce)=>{
+    axios.get(`https://mern-hostel-management-api.vercel.app/getbooking/${userdata.state.data._id}`).then((responce)=>{
       console.log(responce)
       setBookdata(responce.data)
     })

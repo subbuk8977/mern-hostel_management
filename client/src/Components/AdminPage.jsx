@@ -6,17 +6,17 @@ function AdminPage() {
   const history=useNavigate()
   const user=useLocation()
   const bookfunction=()=>{
-    axios.get("http://localhost:8000/allbooking").then((responce)=>{
+    axios.get("https://mern-hostel-management-api.vercel.app/allbooking").then((responce)=>{
       history("/adminviewbooking",{state:{data:responce.data}})
     })
   }
   const viewfunction=()=>{
-    axios.get("http://localhost:8000/alluser").then((responce)=>{
+    axios.get("https://mern-hostel-management-api.vercel.app/alluser").then((responce)=>{
       history("/adminviewuser",{state:{data:responce.data}})
     }) 
   }
   const viewhostel=()=>{
-    axios.get("http://localhost:8000/fetchhotel").then((responce)=>{
+    axios.get("https://mern-hostel-management-api.vercel.app/fetchhotel").then((responce)=>{
       history("/adminviewhostel",{state:{data:responce.data}})
     }) 
   }

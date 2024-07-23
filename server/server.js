@@ -15,11 +15,16 @@ port=8000
 app.use(express.json({ limit: '10mb' }));
 app.use(cors(
     {
-        origin:["https://deploy-mern-lwhq.vercel.app"],
+        origin:["https://mern-hostel-management-api.vercel.app/"],
         methods:["POST","GET"],
         credentials:true
     }
 ))
+
+app.get("/",(req,res)=>{
+    res.json("Hello");
+})
+
 app.use("/",Hosteldataroute)
 app.use("/",Authroute)
 app.use("/",Fetchroute)
