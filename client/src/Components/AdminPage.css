@@ -32,12 +32,13 @@ padding-bottom: 10px;;
     height: 100px;
     border-radius: 10px;
     background: rgb(98,118,185);
-background: linear-gradient(90deg, rgba(98,118,185,1) 0%, rgba(7,66,136,1) 100%);
-color:white;
-display: flex;
-justify-content: center;
-align-items: center;
-font-family: arapey;
+    background: linear-gradient(90deg, rgba(98,118,185,1) 0%, rgba(7,66,136,1) 100%);
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arapey;
+    cursor: pointer;
 }
 .flexofadmin{
     display:flex;

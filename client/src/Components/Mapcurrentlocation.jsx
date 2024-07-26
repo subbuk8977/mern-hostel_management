@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 function Mapcurrentlocation() {
   const [location,setLocation]=useState({
     loaded:false,
-    coordinates:{lan:"",lng:""}
+    coordinates:{lat:"",lng:""}
   })
   const onSuccess=location=>{
     console.log("Current LOcation",location)

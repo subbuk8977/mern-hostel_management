@@ -47,7 +47,7 @@ function Profile() {
     displayimagefunction()
   })
   const displayimagefunction=()=>{
-      axios.get(`http://localhost:8000/getimage/${profile.state.profile._id}`).then((responce)=>{
+      axios.get(`https://mern-hostel-management-api.vercel.app/${profile.state.profile._id}`).then((responce)=>{
       base64String=responce.data.image
       base64String && setUserimage(base64String)
     })
