@@ -21,7 +21,7 @@ function Profileupdate() {
   return (
     <div className='updatewrap'>
     <img src="https://img5.goodfon.com/wallpaper/nbig/6/58/gunten-switzerland-thunersee-lake-thun-bernese-alps-gunten-s.jpg" alt="i"></img>
-        <div className='updatemain'>
+        <div className='updatemain'>  
             <h4>UPDATE ACCOUNT</h4>
             <input type="text" placeholder="Enter New name" value={name.username} name="username" onChange={handle}></input>
             <input type="text" placeholder="Enter New Email" value={name.email} name="email" onChange={handle}></input>
