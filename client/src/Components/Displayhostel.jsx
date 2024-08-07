@@ -287,7 +287,7 @@ function Displayhostel(props) {
   const id = props.userid.data._id
 
   useEffect(() => {
-    axios.get("https://mern-hostel-management-api.vercel.app/fetchhotel")
+    axios.get("http://localhost:8000/fetchhotel")
       .then(response => {
         console.log("Fetched hostels data:", response.data)
         setDatas(response.data)
@@ -296,7 +296,7 @@ function Displayhostel(props) {
         console.error("Error fetching hostels:", error)
       })
 
-    axios.get(`https://mern-hostel-management-api.vercel.app/initialfav/${id}`)
+    axios.get(`http://localhost:8000/initialfav/${id}`)
       .then(response => {
         console.log("Initial favorite hostels:", response.data)
         if (response.data.favhotelidarray) {
@@ -315,7 +315,7 @@ function Displayhostel(props) {
   }
 
   const fetchFavData = () => {
-    axios.get(`https://mern-hostel-management-api.vercel.app/fetchfavhotel/${id}`)
+    axios.get(`http://localhost:8000/fetchfavhotel/${id}`)
       .then(response => {
         console.log("Fetched favorite hostels:", response.data)
         setFetchedFavData(response.data)
@@ -326,7 +326,7 @@ function Displayhostel(props) {
   }
 
   const deleteFavFunc = (hostelId) => {
-    axios.post(`https://mern-hostel-management-api.vercel.app/${id}`, { data: hostelId })
+    axios.post(`http://localhost:8000/deletefav/${id}`, { data: hostelId })
       .then(() => {
         fetchFavData()
       })
@@ -341,7 +341,7 @@ function Displayhostel(props) {
       : [...favDataArray, item._id]
 
     setFavDataArray(updatedFavArray)
-    axios.post(`https://mern-hostel-management-api.vercel.app/${id}`, { data: [item._id] })
+    axios.post(`http://localhost:8000/favhotel/${id}`, { data: [item._id] })
       .catch(error => {
         console.error("Error updating favorite hostel:", error)
       })
@@ -353,7 +353,7 @@ function Displayhostel(props) {
       : [...favDataArraySort, item._id]
 
     setFavDataArraySort(updatedFavArray)
-    axios.post(`https://mern-hostel-management-api.vercel.app/${id}`, { data: [item._id] })
+    axios.post(`http://localhost:8000/favhotel/${id}`, { data: [item._id] })
       .catch(error => {
         console.error("Error updating favorite hostel (sorted):", error)
       })

@@ -13,7 +13,7 @@ function Profileupdate() {
   setUpdateddata({...updateddata,[event.target.name]:event.target.value})
   }
   const update=()=>{
-    axios.post(`https://mern-hostel-management-api.vercel.app/update/${id}`,{updateddata}).then((responce)=>{
+    axios.post(`http://localhost:8000/update/${id}`,{updateddata}).then((responce)=>{
         if(responce!=="failed")
         history("/profile",{state:{profile:responce.data}})
     })

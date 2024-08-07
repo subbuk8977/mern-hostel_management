@@ -33,7 +33,7 @@ function Profile() {
   }
   const upload=()=>{
     setLoaging(true)
-    axios.post(`https://mern-hostel-management-api.vercel.app/uploadimage/${profile.state.profile._id}`,{data}).then((responce)=>{
+    axios.post(`http://localhost:8000/uploadimage/${profile.state.profile._id}`,{data}).then((responce)=>{
       imagepopup(false)
       setLoaging(false)
       alert("Image Updated Succesfully")
@@ -47,7 +47,7 @@ function Profile() {
     displayimagefunction()
   })
   const displayimagefunction=()=>{
-      axios.get(`https://mern-hostel-management-api.vercel.app/${profile.state.profile._id}`).then((responce)=>{
+      axios.get(`http://localhost:8000/${profile.state.profile._id}`).then((responce)=>{
       base64String=responce.data.image
       base64String && setUserimage(base64String)
     })

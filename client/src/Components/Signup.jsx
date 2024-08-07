@@ -8,7 +8,7 @@ function Signup() {
       setData({...data,[event.target.name]:event.target.value})
     }
     const passdata=()=>{
-      axios.post("https://mern-hostel-management-api.vercel.app/signup",{data}).then((responce)=>{
+      axios.post("http://localhost:8000/signup",{data}).then((responce)=>{
         if(responce.data.username)
         {
           alert("Please Login using your created fields")

@@ -80,7 +80,7 @@ function Selectedhotel() {
     console.log("bookdata",bookingdata)
     if(data.state.user.contactno)
     {
-    axios.post("https://mern-hostel-management-api.vercel.app/addbooking",{data:bookingdata}).then((responce)=>{
+    axios.post("http://localhost:8000/addbooking",{data:bookingdata}).then((responce)=>{
       console.log(responce.data)
       if(responce.data===2)
       alert("You cannot Book More than 2 hostels from a Account")
@@ -102,7 +102,7 @@ function Selectedhotel() {
     setEnableservice(false)
   }
   const checkaddReview=()=>{
-    axios.post(`https://mern-hostel-management-api.vercel.app/checkbookeduser/${data.state.user._id}`,{data:data.state.hostel._id}).then((responce)=>{
+    axios.post(`http://localhost:8000/checkbookeduser/${data.state.user._id}`,{data:data.state.hostel._id}).then((responce)=>{
       if(responce.data.success==="CA")
        SetenableaddReview(true)
       else
@@ -114,7 +114,7 @@ function Selectedhotel() {
   setLodings(true)
   setreviewdata({...reviewdata,reviewarray:{userid:data.state.user._id,username:data.state.user.username,review:review,reviewrate:reviewrate}})
   console.log("ressssssssss",reviewdata)
-  reviewdata.reviewarray.review && axios.post("https://mern-hostel-management-api.vercel.app/addreview",{data:reviewdata}).then((responece)=>{
+  reviewdata.reviewarray.review && axios.post("http://localhost:8000/addreview",{data:reviewdata}).then((responece)=>{
     console.log(responece)
     if(responece.data.success==="NSS" || responece.data.success==="SS")
     {
@@ -130,7 +130,7 @@ function Selectedhotel() {
   const fetchviewdatafun=()=>{
     setViewreview(true)
     SetenableaddReview(false)
-    axios.get(`https://mern-hostel-management-api.vercel.app/getreview/${data.state.hostel._id}`).then((responce)=>
+    axios.get(`http://localhost:8000/getreview/${data.state.hostel._id}`).then((responce)=>
     {
       setactualreview(responce.data[0].reviewarray)
     })
