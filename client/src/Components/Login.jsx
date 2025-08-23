@@ -3,6 +3,7 @@ import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router'
 import { Usercontext } from './Usercontext'
 import "./Login.css"
+import img from "./Images/Login.jpg"
 function Login() {
     const history=useNavigate()
     const [data,setData]=useState({})
@@ -24,7 +25,7 @@ function Login() {
   return (
     <div className='loginbody'>
       <div className='logindiv'>
-        <img src="https://kitchendesignpartner.com/wp-content/uploads/2019/09/The-ideal-kitchen-is-the-social-hub-where-everyone-gathers.jpg" alt="loginimage" className='loginimage'></img>
+        <img src={img} alt="loginimage" className='loginimage'></img>
         <div className='inputdiv'>
         <h2 style={{textAlign:"center"}}>Hey Welcome Again</h2>
         <p style={{textAlign:"center"}}>Welcome to Pocket PG.Explore the new ways to find a Hostel of your perfect choice.Come and Just Explore</p>
