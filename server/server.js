@@ -33,8 +33,15 @@ app.use("/",ReviewsRoute)
 
 
 
-
-mongoose.connect("mongodb+srv://venkatasubbaiahkummari03:4a4QgPMkw6wScaCu@shelby.bxmp0ae.mongodb.net/BLOGS?retryWrites=true&w=majority&appName=shelby").then(()=>console.log("Connected to Database"))
+mongoose.connect(
+  "mongodb://venkatasubbaiahkummari03:etIi9zGMYiV5Ecz9@ac-4g9djmh-shard-00-00.bxmp0ae.mongodb.net:27017,ac-4g9djmh-shard-00-01.bxmp0ae.mongodb.net:27017,ac-4g9djmh-shard-00-02.bxmp0ae.mongodb.net:27017/BLOGS?ssl=true&replicaSet=atlas-awe1kj-shard-0&authSource=admin&appName=shelby"
+)
+.then(() => {
+  console.log("✅ Connected to Database");
+})
+.catch((err) => {
+  console.error("❌ DB Error:", err);
+});
 app.listen(port,(req,res)=>{
-    console.log("Server Started Successfully")
+    console.log("Server Started Successfully");
 })
