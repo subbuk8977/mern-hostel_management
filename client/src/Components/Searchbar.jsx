@@ -1,6 +1,14 @@
 import React, { useState } from 'react'
 import {searchdata} from "./Searchdata"
 import "./Searchbar.css"
+import PropTypes from 'prop-types'
+
+Searchbar.propTypes = {
+  setLocation: PropTypes.func.isRequired,
+  setSortenable: PropTypes.func.isRequired
+}
+
+
 function Searchbar(props) {
   const [searchitem,setSearchitem]=useState("")
   const [selected,setSelected]=useState()

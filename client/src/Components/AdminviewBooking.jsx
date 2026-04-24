@@ -10,7 +10,7 @@ function AdminviewBooking() {
           <h3 className='h3ofviewbok'>Total Bookings....</h3>
           {books.state.data.map((item,key)=>{
           return(
-          <div className='divofeachmainbook'>
+          <div className='divofeachmainbook'  key={item._id}>
             <div className='booksof'>
             <p>Booking Id:{item._id}</p>
             <p>User Id:{item.Bookeduserid}</p>

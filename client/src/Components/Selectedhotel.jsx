@@ -11,6 +11,52 @@ import { useState } from "react"
 import axios from "axios"
 import ReactSwitch from "react-switch"
 import Alert from "./Alert"
+
+const amenityConfig = {
+  Wifi: {
+    img: "https://cdn-icons-png.flaticon.com/128/747/747982.png",
+    label: "Wifi"
+  },
+  vehicle: {
+    img: "https://cdn-icons-png.flaticon.com/128/4277/4277309.png",
+    label: "Travel Service"
+  },
+  Ac: {
+    img: "https://cdn-icons-png.flaticon.com/128/911/911409.png",
+    label: "Ac"
+  },
+  Gym: {
+    img: "https://cdn-icons-png.flaticon.com/128/2871/2871250.png",
+    label: "Gym"
+  },
+  Inverter: {
+    img: "https://cdn-icons-png.flaticon.com/128/10820/10820540.png",
+    label: "Inverter"
+  },
+  food: {
+    img: "https://cdn-icons-png.flaticon.com/128/10896/10896146.png",
+    label: "Homely food"
+  }
+}
+
+const serviceConfig = {
+  iron: {
+    img: "https://cdn-icons-png.flaticon.com/128/79/79677.png",
+    label: "Irons",
+    reductionKey: "noironing"
+  },
+  food: {
+    img: "https://cdn-icons-png.flaticon.com/128/857/857681.png",
+    label: "Food",
+    reductionKey: "nofood"
+  },
+  wash: {
+    img: "https://cdn-icons-png.flaticon.com/128/1104/1104590.png",
+    label: "Wash",
+    reductionKey: "nowash"
+  }
+}
+
 function Selectedhotel() {
 
   const history=useNavigate()
@@ -144,47 +190,15 @@ function Selectedhotel() {
     <div>
     <p className="amenityheadingp">Amenities we provides.....</p>
     <div className="amenitymaindiv">
-    {amenty.map((item)=>{
-      if(item==="Wifi")
-      return(
-        <div className="amenitydiv">
-          <img src="https://cdn-icons-png.flaticon.com/128/747/747982.png" alt="wifi"></img>
-          <p>Wifi</p>
-        </div>
-      )
-      else if(item==="vehicle")
-      return(
-        <div className="amenitydiv">
-          <img src="https://cdn-icons-png.flaticon.com/128/4277/4277309.png" alt="wifi"></img>
-          <p>Travel Service</p>
-        </div>
-      )
-      else if(item==="Ac")
-      return(
-        <div className="amenitydiv">
-          <img src="https://cdn-icons-png.flaticon.com/128/911/911409.png" alt="wifi"></img>
-          <p>Ac</p>
-        </div>
-      )
-      else if(item==="Gym")
-      return(
-        <div className="amenitydiv">
-          <img src="https://cdn-icons-png.flaticon.com/128/2871/2871250.png" alt="wifi"></img>
-          <p>Gym</p>
-        </div>
-      )
-      else if(item==="Inverter")
-      return(
-        <div className="amenitydiv">
-          <img src="https://cdn-icons-png.flaticon.com/128/10820/10820540.png" alt="wifi"></img>
-          <p>Inverter</p>
-        </div>
-      )
-      else if(item==="food")
-      return(
-        <div className="amenitydiv">
-          <img src="https://cdn-icons-png.flaticon.com/128/10896/10896146.png" alt="wifi"></img>
-          <p>Homely food</p>
+    {amenty.map((item) => {
+      const amenity = amenityConfig[item]
+
+      if (!amenity) return null
+
+      return (
+        <div className="amenitydiv" key={item}>
+          <img src={amenity.img} alt={amenity.label} />
+          <p>{amenity.label}</p>
         </div>
       )
     })}</div></div>
@@ -228,7 +242,7 @@ function Selectedhotel() {
       <ul>
         {nearbyplace.map((item)=>{
           return(
-            <li className="nearbyli">{item}</li>
+            <li className="nearbyli" key={item}>{item}</li>
           )
         })}
       </ul>
@@ -286,39 +300,31 @@ function Selectedhotel() {
     <div>
     <h3 className="customizehead">Customize services</h3>
     <p className="pofcustomixe">Select the Option that you need</p>
-    {services.map((item,key)=>{
-      if(item==="iron")
-      return(
-      <div className="cutomizeoptdiv">
-     <div className="warpofeachservice">
-      <img src="https://cdn-icons-png.flaticon.com/128/79/79677.png" alt="service" className="imageserviceofdiv"></img>
-      <p className="ptag">Irons</p>
-      <ReactSwitch checked={togglecheckarray.includes(key)?false :true}  onChange={()=>togglehandle(key,item)}className="toggle" key={key}/>
-     </div>
-     <p className="reductionp">Reduction -{data.state.hostel.noironing}rs/month</p>
-    </div>
-      )
-      else if(item==="food")
-      return(
-      <div className="cutomizeoptdiv">
-     <div className="warpofeachservice">
-      <img src="https://cdn-icons-png.flaticon.com/128/857/857681.png" alt="service" className="imageserviceofdiv"></img>
-      <p className="ptag">Food</p>
-      <ReactSwitch checked={togglecheckarray.includes(key)?false :true}  onChange={()=>togglehandle(key,item)} className="toggle" key={key}/>
-     </div>
-     <p className="reductionp">Reduction -{data.state.hostel.nofood}rs/month</p>
-    </div>
-      )
-      else if(item==="wash")
-      return(
-        <div className="cutomizeoptdiv">
-     <div className="warpofeachservice">
-      <img src="https://cdn-icons-png.flaticon.com/128/1104/1104590.png" alt="service" className="imageserviceofdiv"></img>
-      <p className="ptag">wash</p>
-      <ReactSwitch checked={togglecheckarray.includes(key)?false :true}  onChange={()=>togglehandle(key,item)} className="toggle" key={key}/>
-     </div>
-     <p className="reductionp">Reduction -{data.state.hostel.nowash}rs/month</p>
-    </div>
+    {services.map((item, index) => {
+      const service = serviceConfig[item]
+      if (!service) return null
+
+      return (
+        <div className="cutomizeoptdiv" key={item}>
+          <div className="warpofeachservice">
+            <img
+              src={service.img}
+              alt={service.label}
+              className="imageserviceofdiv"
+            />
+            <p className="ptag">{service.label}</p>
+
+            <ReactSwitch
+              checked={!togglecheckarray.includes(index)}
+              onChange={() => togglehandle(index, item)}
+              className="toggle"
+            />
+          </div>
+
+          <p className="reductionp">
+            Reduction -{data.state.hostel?.[service.reductionKey]} rs/month
+          </p>
+        </div>
       )
     })}
     </div>
@@ -345,7 +351,7 @@ function Selectedhotel() {
    {enableaddreview && <div className="addreviewdiv">
    <img src="https://cdn-icons-png.flaticon.com/128/2734/2734822.png" alt="closert" className="closerevieadaa" onClick={()=>SetenableaddReview(false)}></img>
    <h4 className="bookerh4">Hey {data.state.user.username}, Give Your Valuable Review</h4>
-   <input type="text" Placeholder="Give Your Feed Back Here" className="reviewinput" onChange={(e)=>setReview(e.target.value)}></input>
+   <input type="text" placeholder="Give Your Feed Back Here" className="reviewinput" onChange={(e)=>setReview(e.target.value)}></input>
    <p className="giveratep">Give a Rating Out of 5</p>
    <input type="number" className="revewrate" onChange={(e)=>setReviewrate(e.target.value)}></input>
    <button className="addreviwbutton" onClick={addreviewcall}>Add Review</button>
@@ -354,23 +360,39 @@ function Selectedhotel() {
    {viewreview && <div className="viewreviewdiv">
     <img src="https://cdn-icons-png.flaticon.com/128/2732/2732657.png" alt="" className="closeofopenviewreviw" onClick={()=>setViewreview(false)}></img>
     <h3 className="headofreview">Here the Revies...</h3>
-     {actualreviewdata ? actualreviewdata.map((item,key)=>{
-      return(
-        <div className={parseInt(item.reviewrate)>3 ?"manidivofreview":"manidivofreviews"}>
-        <div className="emajomaindiv">
+     {actualreviewdata?.map((item) => {
+  const rate = parseInt(item.reviewrate)
+
+  let emoji = ""
+  if (rate > 3) {
+    emoji = "https://cdn-icons-png.flaticon.com/128/10851/10851206.png"
+  } else if (rate === 3) {
+    emoji = "https://cdn-icons-png.flaticon.com/128/742/742923.png"
+  } else {
+    emoji = "https://cdn-icons-png.flaticon.com/128/742/742774.png"
+  }
+
+  return (
+    <div
+      className={rate > 3 ? "manidivofreview" : "manidivofreviews"}
+      key={item._id}
+    >
+      <div className="emajomaindiv">
         <div className="reviewrowperson">
-        <BsPersonCircle/>
-        <p className="reviewuser">{item.username}</p>
+          <BsPersonCircle />
+          <p className="reviewuser">{item.username}</p>
         </div>
-        <img src={parseInt(item.reviewrate)>3?"https://cdn-icons-png.flaticon.com/128/10851/10851206.png":parseInt(item.reviewrate)===3 ?"https://cdn-icons-png.flaticon.com/128/742/742923.png":"https://cdn-icons-png.flaticon.com/128/742/742774.png"} alt="imago" className="emoji"></img>
-        </div>
-        <div className="diddidvreview">
-          <p>{item.review}</p>
-          <p>Rate: {item.reviewrate}/5</p>
-        </div>
-        </div>
-      )
-     }):<h4 className="deafultviewa">Currently This hostel Have no Reviews</h4>}
+
+        <img src={emoji} alt="emoji" className="emoji" />
+      </div>
+
+      <div className="diddidvreview">
+        <p>{item.review}</p>
+        <p>Rate: {rate}/5</p>
+      </div>
+    </div>
+  )
+})}:<h4 className="deafultviewa">Currently This hostel Have no Reviews</h4>
    </div>}
    {notificationenable && <Alert data={"Thankyou For Submiting Your Review"}/>}
    </div>

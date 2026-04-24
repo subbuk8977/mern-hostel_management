@@ -6,6 +6,20 @@ import { Icon } from 'leaflet'
 import Mapcurrentlocation from './Mapcurrentlocation'
 import MapRouting from './MapRouting'
 import L from "leaflet"
+import PropTypes from 'prop-types'
+
+Map.propTypes = {
+  hostel: PropTypes.shape({
+    lat: PropTypes.number.isRequired,
+    lng: PropTypes.number.isRequired,
+    hostelimage: PropTypes.string.isRequired,
+    hostelname: PropTypes.string.isRequired,
+    distancefrommailocation: PropTypes.number.isRequired,
+    mainlocation: PropTypes.string.isRequired
+  }).isRequired
+}
+
+
 function Map(props) {
   const [currentlocationenable,setCurrentlocationenable]=useState(false)
   const icon=new Icon({

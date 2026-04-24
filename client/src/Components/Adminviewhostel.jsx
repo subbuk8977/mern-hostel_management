@@ -11,7 +11,7 @@ function Adminviewhostel() {
           <h3 className='h3ofviewbok'>All Users....</h3>
           {hostel.state.data.map((item,key)=>{
           return(
-          <div className='divofeachmainbook'>
+          <div className='divofeachmainbook'  key={item._id}>
             <div className='booksof'>
             <p>Hostel Id:{item._id}</p>
             </div>
